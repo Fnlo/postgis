@@ -30,8 +30,8 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.postgresql.Driver;
-import org.postgresql.PGConnection;
+import com.highgo.jdbc.Driver;
+import com.highgo.jdbc.PGConnection;
 
 /**
  * DriverWrapper
@@ -47,7 +47,7 @@ import org.postgresql.PGConnection;
  * the jdbc URL.
  * 
  * When using the drivermanager, you need to initialize DriverWrapper instead of
- * (or in addition to) org.postgresql.Driver. When using a J2EE DataSource
+ * (or in addition to) com.highgo.jdbc.Driver. When using a J2EE DataSource
  * implementation, set the driver class property in the datasource config, the
  * following works for jboss:
  * 
@@ -148,7 +148,7 @@ public class DriverWrapper extends Driver {
      * @exception SQLException if a database access error occurs
      * 
      * @see java.sql.Driver#connect
-     * @see org.postgresql.Driver
+     * @see com.highgo.jdbc.Driver
      */
     public java.sql.Connection connect(String url, Properties info) throws SQLException {
         url = mangleURL(url);
@@ -174,10 +174,8 @@ public class DriverWrapper extends Driver {
      * @see java.sql.Driver#acceptsURL
      * @param url the URL of the driver
      * @return true if this driver accepts the given URL
-     * @exception SQLException Passed through from the underlying PostgreSQL
-     *                driver, should not happen.
      */
-    public boolean acceptsURL(String url) throws SQLException {
+    public boolean acceptsURL(String url) {
         try {
             url = mangleURL(url);
         } catch (SQLException e) {

@@ -27,8 +27,8 @@
 
 package org.postgis;
 
-import org.postgresql.util.PGobject;
-import org.postgresql.util.PGtokenizer;
+import com.highgo.jdbc.util.PGobject;
+import com.highgo.jdbc.util.PGtokenizer;
 
 import java.sql.SQLException;
 

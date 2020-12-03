@@ -27,7 +27,7 @@
 package org.postgis;
 
 import org.postgis.binary.BinaryParser;
-import org.postgresql.util.PGobject;
+import com.highgo.jdbc.util.PGobject;
 
 import java.sql.SQLException;
 

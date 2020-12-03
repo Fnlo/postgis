@@ -93,7 +93,7 @@ public class TestJava2d {
             throws ClassNotFoundException, SQLException {
         ArrayList geometries = new ArrayList();
         System.out.println("Creating JDBC connection...");
-        Class.forName("org.postgresql.Driver");
+        Class.forName("com.highgo.jdbc.Driver");
         Connection conn = DriverManager.getConnection(dburl, dbuser, dbpass);
 
         System.out.println("fetching geometries");

@@ -25,8 +25,8 @@
 
 package org.postgis.java2d;
 
-import org.postgresql.Driver;
-import org.postgresql.PGConnection;
+import com.highgo.jdbc.Driver;
+import com.highgo.jdbc.PGConnection;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -59,7 +59,7 @@ public class Java2DWrapper extends Driver {
 
     static {
         try {
-            // Analogy to org.postgresql.Driver
+            // Analogy to com.highgo.jdbc.Driver
             java.sql.DriverManager.registerDriver(new Java2DWrapper());
         } catch (SQLException e) {
             e.printStackTrace();
@@ -76,7 +76,7 @@ public class Java2DWrapper extends Driver {
      * @exception SQLException if a database access error occurs
      * 
      * @see java.sql.Driver#connect
-     * @see org.postgresql.Driver
+     * @see com.highgo.jdbc.Driver
      */
     public java.sql.Connection connect(String url, Properties info) throws SQLException {
         url = mangleURL(url);
@@ -115,10 +115,8 @@ public class Java2DWrapper extends Driver {
      * @see java.sql.Driver#acceptsURL
      * @param url the URL of the driver
      * @return true if this driver accepts the given URL
-     * @exception SQLException if a database-access error occurs (Dont know why
-     *                it would *shrug*)
      */
-    public boolean acceptsURL(String url) throws SQLException {
+    public boolean acceptsURL(String url) {
         try {
             url = mangleURL(url);
         } catch (SQLException e) {

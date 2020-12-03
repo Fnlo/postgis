@@ -60,7 +60,7 @@ public class TestServer {
         try {
 
             System.out.println("Creating JDBC connection...");
-            Class.forName("org.postgresql.Driver");
+            Class.forName("com.highgo.jdbc.Driver");
             conn = DriverManager.getConnection(dburl, dbuser, dbpass);
             System.out.println("Adding geometric type entries...");
             /*
@@ -74,7 +74,7 @@ public class TestServer {
              * approach from org.postgis.DriverWrapper (which we do not use here
              * intentionally to have a test for the other ways to do it).
              */
-            if (conn.getClass().getName().equals("org.postgresql.jdbc2.Connection")) {
+            if (conn.getClass().getName().equals("com.highgo.jdbc.jdbc2.Connection")) {
                 ((org.postgresql.Connection) conn).addDataType("geometry", "org.postgis.PGgeometry");
                 ((org.postgresql.Connection) conn).addDataType("box3d", "org.postgis.PGbox3d");
             } else {

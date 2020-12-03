@@ -29,7 +29,7 @@ import java.awt.Shape;
 import java.awt.geom.*;
 import java.sql.SQLException;
 
-import org.postgresql.util.PGobject;
+import com.highgo.jdbc.util.PGobject;
 
 /**
  * PostGIS Java2D geometry implementation (read-only).
@@ -55,7 +55,7 @@ import org.postgresql.util.PGobject;
  * 
  * @see java.awt.geom.GeneralPath
  * @see java.awt.Shape
- * @see org.postgresql.util.PGobject
+ * @see com.highgo.jdbc.util.PGobject
  * 
  * @author Markus Schaber
  */

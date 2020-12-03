@@ -31,7 +31,7 @@ import org.postgis.PGgeometry;
 import org.postgis.binary.BinaryParser;
 import org.postgis.binary.BinaryWriter;
 import org.postgis.binary.ValueSetter;
-import org.postgresql.util.PGtokenizer;
+import com.highgo.jdbc.util.PGtokenizer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

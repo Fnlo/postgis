@@ -27,8 +27,8 @@ package examples;
 import org.postgis.PGbox2d;
 import org.postgis.PGbox3d;
 import org.postgis.PGgeometry;
-import org.postgresql.Driver;
-import org.postgresql.util.PGobject;
+import com.highgo.jdbc.Driver;
+import com.highgo.jdbc.util.PGobject;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -26,7 +26,7 @@
 
 package org.postgis;
 
-import org.postgresql.util.PGtokenizer;
+import com.highgo.jdbc.util.PGtokenizer;
 
 import java.sql.SQLException;
 import java.util.Iterator;

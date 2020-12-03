@@ -24,7 +24,7 @@
 
 package org.postgis;
 
-import org.postgresql.Driver;
+import com.highgo.jdbc.Driver;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

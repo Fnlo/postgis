@@ -28,8 +28,8 @@ package examples;
 
 import org.postgis.PGbox2d;
 import org.postgis.PGbox3d;
-import org.postgresql.util.PGobject;
-import org.postgresql.util.PGtokenizer;
+import com.highgo.jdbc.util.PGobject;
+import com.highgo.jdbc.util.PGtokenizer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
